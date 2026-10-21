@@ -1,0 +1,90 @@
+Dataset: 202292 filas, 33 tickers, 2000-01-03 .. 2026-09-18
+
+======================================================================
+Q1. Month + week-of-month dummies
+======================================================================
+Dummies: 115 (month_wom: 60)
+Features NUMERICAL+DUMMIES: 299
+                         corr  abs_corr
+month_wom_October_w4   0.0246    0.0246
+month_wom_November_w3  0.0233    0.0233
+month_wom_February_w1 -0.0209    0.0209
+month_wom_January_w2  -0.0198    0.0198
+month_wom_January_w5  -0.0198    0.0198
+month_wom_November_w2  0.0191    0.0191
+month_wom_January_w3  -0.0185    0.0185
+month_wom_February_w2 -0.0183    0.0183
+-> Mayor |corr|: month_wom_October_w4 = 0.025
+
+Split:
+                  min        max   count
+split                                   
+test       2022-09-16 2026-09-18   33163
+train      2000-01-03 2018-09-13  136842
+validation 2018-09-14 2022-09-15   32287
+
+======================================================================
+Q2. New hand rules
+======================================================================
+  pred0_manual_cci                 predicciones=1 en TEST:    921  precision: 0.5646
+  pred1_manual_prev_g1             predicciones=1 en TEST:  19158  precision: 0.5787
+  pred2_manual_prev_g1_and_snp     predicciones=1 en TEST:  15244  precision: 0.5726
+  pred3_manual_dgs10_5             predicciones=1 en TEST:  15910  precision: 0.5877
+  pred4_manual_dgs10_fedfunds      predicciones=1 en TEST:  15921  precision: 0.5025
+
+======================================================================
+Q3. Unique correct predictions of pred5_clf_10
+======================================================================
+  pred5_clf_10                     predicciones=1 en TEST:   8628  precision: 0.5912
+|--- cpi_core_yoy <= 0.02
+|   |--- DGS10 <= 1.75
+|   |   |--- DGS1 <= 0.56
+|   |   |   |--- truncated branch of depth 8
+|   |   |--- DGS1 >  0.56
+|   |   |   |--- truncated branch of depth 8
+|   |--- DGS10 >  1.75
+|   |   |--- growth_wti_oil_365d <= 1.50
+|   |   |   |--- truncated branch of depth 8
+|   |   |--- growth_wti_oil_365d >  1.50
+|   |   |   |--- truncated branch of depth 8
+|--- cpi_core_yoy >  0.02
+|   |--- FEDFUNDS <= 4.96
+|   |   |--- growth_btc_usd_365d <= 1.21
+|   |   |   |--- truncated branch of depth 8
+|   |   |--- growth_btc_usd_365d >  1.21
+|   |   |   |--- truncated branch of depth 8
+|   |--- FEDFUNDS >  4.96
+|   |   |--- growth_wti_oil_365d <= 0.91
+|   |   |   |--- truncated branch of depth 8
+|   |   |--- growth_wti_oil_365d >  0.91
+|   |   |   |--- truncated branch of depth 8
+
+-> Positivos en TEST que solo detecta pred5_clf_10: 1187
+
+======================================================================
+Q4. Decision tree max_depth tuning
+======================================================================
+           precision_valid  precision_test  n_pos_test
+max_depth                                             
+1                   0.6014          0.5701       33163
+2                   0.6647          0.6225       11760
+3                   0.6422          0.5720       14263
+4                   0.6532          0.6292        6677
+5                   0.6895          0.6000        7487
+6                   0.7104          0.6062        6704
+7                   0.7058          0.6211        6682
+8                   0.7369          0.6218        9410
+9                   0.7535          0.6112        9053
+10                  0.7802          0.5912        8628
+11                  0.7915          0.6028        7552
+12                  0.8077          0.5819        8518
+-> Mejor max_depth en TEST: 4 (precision 0.6292)
+
+Comparación de todas las predicciones en TEST:
+  pred0_manual_cci                 predicciones=1 en TEST:    921  precision: 0.5646
+  pred1_manual_prev_g1             predicciones=1 en TEST:  19158  precision: 0.5787
+  pred2_manual_prev_g1_and_snp     predicciones=1 en TEST:  15244  precision: 0.5726
+  pred3_manual_dgs10_5             predicciones=1 en TEST:  15910  precision: 0.5877
+  pred4_manual_dgs10_fedfunds      predicciones=1 en TEST:  15921  precision: 0.5025
+  pred5_clf_10                     predicciones=1 en TEST:   8628  precision: 0.5912
+  pred6_clf_best                   predicciones=1 en TEST:   6677  precision: 0.6292

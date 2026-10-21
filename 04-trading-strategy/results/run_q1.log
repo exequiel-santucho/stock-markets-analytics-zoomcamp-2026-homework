@@ -1,0 +1,94 @@
+
+==============================================================================
+Escenario: q1
+==============================================================================
+CATEGORICAL = ['Month', 'Weekday', 'ticker_type']
+Features NUMERICAL+DUMMIES: 208  (dummies: 22)
+                  min        max   count
+split                                   
+test       2022-09-16 2026-09-18   33163
+train      2000-01-03 2018-09-13  136842
+validation 2018-09-14 2022-09-15   32287
+
+==============================================================================
+Modelos
+==============================================================================
+  DecisionTree(max_depth=10) entrenado en 20s
+  DecisionTree(max_depth=4) entrenado en 9s
+  DecisionTree(max_depth=7) entrenado en 16s
+  RandomForest(100, max_depth=13) entrenado en 42s
+
+Random Forest en TEST: precision/recall por umbral
+ threshold   tp   fp  trades(tp+fp)  precision  recall
+      0.50 7128 4775          11903     0.5988  0.3770
+      0.51 5958 3893           9851     0.6048  0.3151
+      0.52 4790 3173           7963     0.6015  0.2534
+      0.53 3801 2460           6261     0.6071  0.2010
+      0.54 2964 1949           4913     0.6033  0.1568
+      0.55 2264 1492           3756     0.6028  0.1198
+      0.56 1664 1116           2780     0.5986  0.0880
+      0.57 1258  828           2086     0.6031  0.0665
+      0.58  916  603           1519     0.6030  0.0485
+      0.59  656  434           1090     0.6018  0.0347
+      0.60  445  300            745     0.5973  0.0235
+      0.61  329  193            522     0.6303  0.0174
+      0.62  218  131            349     0.6246  0.0115
+      0.63  143   86            229     0.6245  0.0076
+      0.64  102   51            153     0.6667  0.0054
+      0.65   59   33             92     0.6413  0.0031
+      0.66   32   19             51     0.6275  0.0017
+      0.67   17   13             30     0.5667  0.0009
+      0.68    8    5             13     0.6154  0.0004
+      0.69    5    2              7     0.7143  0.0003
+      0.70    0    1              1     0.0000  0.0000
+
+Precision en TEST:
+  pred0_manual_cci                 positivos=   921  precision=0.5646
+  pred1_manual_prev_g1             positivos= 19158  precision=0.5787
+  pred2_manual_prev_g1_and_snp     positivos= 15244  precision=0.5726
+  pred3_manual_dgs10_5             positivos= 15910  precision=0.5877
+  pred4_manual_dgs10_fedfunds      positivos= 15921  precision=0.5025
+  pred5_clf_10                     positivos=  9699  precision=0.6040
+  pred6_clf_4                      positivos=  6677  precision=0.6292
+  pred7_clf_second_best            positivos=  5833  precision=0.6534
+  pred8_clf_second_best_rule_56    positivos=  5820  precision=0.6538
+  pred9_clf_second_best_rule_66    positivos=  4134  precision=0.6176
+  pred10_rf_best_rule_55           positivos=  3756  precision=0.6028
+  pred11_rf_best_rule_65           positivos=    92  precision=0.6413
+  pred12_rf_best_rule_56           positivos=  2780  precision=0.5986
+  pred13_rf_best_rule_57           positivos=  2086  precision=0.6031
+  pred14_rf_best_rule_58           positivos=  1519  precision=0.6030
+  pred15_rf_best_rule_59           positivos=  1090  precision=0.6018
+  pred16_rf_best_rule_60           positivos=   745  precision=0.5973
+  pred17_rf_best_rule_61           positivos=   522  precision=0.6303
+  pred18_rf_best_rule_62           positivos=   349  precision=0.6246
+  pred19_rf_best_rule_63           positivos=   229  precision=0.6245
+  pred20_rf_best_rule_64           positivos=   153  precision=0.6667
+
+==============================================================================
+Simulación 1
+==============================================================================
+                   prediction  sim1_count_investments  sim1_net_rev  sim1_avg_investments_per_day  sim1_capital  sim1_CAGR
+             pred0_manual_cci                     921     1655.1929                        1.8758        6000.0     1.0628
+         pred1_manual_prev_g1                   19158    40815.7669                       18.4212       72000.0     1.1188
+ pred2_manual_prev_g1_and_snp                   15244    30759.2942                       21.7151       75000.0     1.0897
+         pred3_manual_dgs10_5                   15910    37541.8030                       31.9478       99000.0     1.0837
+  pred4_manual_dgs10_fedfunds                   15921    15348.6800                       31.9058       99000.0     1.0367
+                 pred5_clf_10                    9699    29390.9732                       10.5884       51000.0     1.1205
+                  pred6_clf_4                    6677    21048.0460                       30.3500       99000.0     1.0494
+        pred7_clf_second_best                    5833    20314.4577                       14.1922       87000.0     1.0539
+pred8_clf_second_best_rule_56                    5820    20297.1552                       14.1951       87000.0     1.0538
+pred9_clf_second_best_rule_66                    4134    10658.5102                       11.1429       75000.0     1.0338
+       pred10_rf_best_rule_55                    3756    12983.5961                        6.0581       21000.0     1.1279
+       pred11_rf_best_rule_65                      92      341.7224                        3.2857        9000.0     1.0094
+       pred12_rf_best_rule_56                    2780     9897.1316                        5.3462       21000.0     1.1013
+       pred13_rf_best_rule_57                    2086     7593.3261                        4.8512       18000.0     1.0920
+       pred14_rf_best_rule_58                    1519     5342.6268                        4.4941       18000.0     1.0671
+       pred15_rf_best_rule_59                    1090     3753.3190                        4.3254       15000.0     1.0574
+       pred16_rf_best_rule_60                     745     2531.1367                        3.9418       12000.0     1.0490
+       pred17_rf_best_rule_61                     522     2118.4891                        3.6000        9000.0     1.0543
+       pred18_rf_best_rule_62                     349     1266.4989                        3.4900        9000.0     1.0335
+       pred19_rf_best_rule_63                     229      853.5840                        3.0946        9000.0     1.0229
+       pred20_rf_best_rule_64                     153      650.3398                        3.0600        9000.0     1.0176
+
+Mejor CAGR: pred10_rf_best_rule_55 = 1.1279 (6.06 trades/día en promedio)

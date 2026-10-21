@@ -1,0 +1,86 @@
+======================================================================
+Q1. Withdrawn IPOs by company type
+======================================================================
+IPOs retiradas antes del 11/09/2026: 29
+ File Date                                         Company     Company Type  Avg_price  Shares (millions)  Shares_offered_value
+2026-09-10                 Motive Technologies (Withdrawn)     Technologies        NaN               0.00              100.0000
+2026-09-04                   Idea Tech Holding (Withdrawn)         Holdings       4.50               2.00                9.0000
+2026-09-01          Hornbeck Offshore Services (Withdrawn)            Other        NaN               0.00              100.0000
+2026-08-31           Coolbit Technologies Ltd. (Withdrawn)     Technologies       4.50               5.00               22.5000
+2026-08-27       Timber Road Acquisition Corp. (Withdrawn) Acquisition Corp      10.00              20.00              200.0000
+2026-08-24                    pan-Africa Corp. (Withdrawn) Acquisition Corp      10.00              12.50              125.0000
+2026-08-18                   Living Homeopathy (Withdrawn)            Other       5.00               3.75               18.7500
+2026-07-31                       Nuclea Energy (Withdrawn)            Other       9.00               5.60               50.4000
+2026-07-10          APEX Global Solutions Ltd. (WITHDRAWN)          Limited       4.00               3.75               15.0000
+2026-07-08                 Cloud Data Holdings (Withdrawn)         Holdings       4.25               3.75               15.9375
+2026-07-08          INFINT Acquisition Corp. 2 (Withdrawn) Acquisition Corp      10.00              10.00              100.0000
+2026-06-24            Kilcoy Global Foods Ltd. (Withdrawn)          Limited        NaN               0.00              100.0000
+2026-06-24                  Safepoint Holdings (Withdrawn)         Holdings      16.00              16.67              266.7200
+2026-06-11                        Club Versante Group Ltd.            Group       5.00               2.00               10.0000
+2026-06-01 Envoy Technologies (Withdrawn – Direct Listing)     Technologies       8.00               7.80               62.4000
+2026-05-20                      Vistek Limited (Withdrawn)          Limited       5.00               6.25               31.2500
+2026-05-13                           Ultratrex (Withdrawn)            Other       5.00               1.25                6.2500
+2026-05-07                        AiXin Life International            Other       4.00               2.38                9.5200
+2026-05-06           Xinxu Copper Industry Technology Ltd.          Limited        NaN               0.00               15.0000
+2026-05-05                  EUPEC International Group Ltd.            Group       4.00               3.75               15.0000
+2026-05-01                          CCIS Acquisition Corp. Acquisition Corp      10.00               6.00               60.0000
+2026-04-01     Going International Holding Company Limited          Limited        NaN               0.00               20.0000
+2026-03-16                               Firefly Automatix            Other       5.50               4.55               25.0250
+2026-03-06                  Invea Therapeutics (Withdrawn)            Other        NaN               0.00               75.0000
+2026-02-27              Billion Group Holdings (Withdrawn)            Group       5.00               1.50                7.5000
+2026-02-24                               AIGO Holding Ltd.          Limited       5.00               2.00               10.0000
+2026-02-19             Clear Street Group Inc. (Withdrawn)             Inc.      27.00              13.00              351.0000
+2026-02-13                     Lemeng Holdings (Withdrawn)         Holdings       5.00               4.00               20.0000
+2026-01-27                                         SFIDA X            Other       5.50               1.00                5.5000
+                   count    sum
+Company Type                  
+Acquisition Corp      4  485.0
+Inc.                  1  351.0
+Holdings              4  311.7
+Other                 8  290.4
+Limited               6  191.2
+Technologies          3  184.9
+Group                 3   32.5
+-> Clase con más valor retirado: Acquisition Corp (485.0 M$)
+======================================================================
+Q2. Median Sharpe ratio of 2025 IPOs
+======================================================================
+IPOs 2025: 231
+IPOs antes del 1/09/2025 y con retorno != 0%: 146
+Tickers con datos en Yahoo Finance: 129
+Price  growth_252d  volatility   Sharpe
+count      126.000     128.000  126.000
+mean         1.023      28.419      inf
+std          3.056      67.512      NaN
+min          0.001       0.000   -0.040
+25%          0.141       2.393    0.010
+50%          0.595       8.370    0.046
+75%          1.034      24.255    0.122
+max         33.638     627.698      inf
+-> Sharpe mediano al 11/09/2026: 0.046
+growth_252d: mediana 0.595 vs media 1.023
+======================================================================
+Q3. Fixed months holding strategy
+======================================================================
+                    count    mean    25%    50%    75%
+future_growth_1_m   129.0  97.957  0.711  0.940  1.113
+future_growth_2_m   127.0  70.099  0.590  0.893  1.165
+future_growth_3_m   127.0  52.845  0.452  0.829  1.150
+future_growth_4_m   127.0  23.388  0.393  0.730  1.177
+future_growth_5_m   127.0  55.909  0.413  0.691  1.043
+future_growth_6_m   127.0  65.984  0.308  0.726  1.029
+future_growth_7_m   127.0  61.093  0.255  0.662  1.017
+future_growth_8_m   127.0  22.088  0.198  0.604  1.032
+future_growth_9_m   127.0  20.590  0.175  0.560  1.018
+future_growth_10_m  127.0  11.578  0.185  0.533  1.035
+future_growth_11_m  127.0   9.148  0.170  0.482  1.106
+future_growth_12_m  126.0   5.974  0.165  0.492  1.042
+-> Mejor horizonte: future_growth_1_m con mediana 0.940
+======================================================================
+Q4. RSI < 30 strategy
+======================================================================
+Shape del dataset: (229932, 203)
+Trades: 5206
+Retorno medio a 30 días: 1.26%
+Win rate: 55.13%
+-> Ganancia neta: $65,806 (~66 mil)

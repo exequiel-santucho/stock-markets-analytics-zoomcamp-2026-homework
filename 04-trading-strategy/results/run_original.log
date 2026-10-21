@@ -1,0 +1,52 @@
+
+==============================================================================
+Escenario: original
+==============================================================================
+CATEGORICAL = ['Month', 'Weekday', 'Ticker', 'ticker_type', 'month_wom']
+Features NUMERICAL+DUMMIES: 301  (dummies: 115)
+                  min        max   count
+split                                   
+test       2022-09-16 2026-09-18   33163
+train      2000-01-03 2018-09-13  136842
+validation 2018-09-14 2022-09-15   32287
+
+==============================================================================
+Modelos
+==============================================================================
+  DecisionTree(max_depth=10) entrenado en 26s
+  DecisionTree(max_depth=4) entrenado en 9s
+  DecisionTree(max_depth=7) entrenado en 18s
+  RandomForest(100, max_depth=13) entrenado en 29s
+
+Precision en TEST:
+  pred0_manual_cci                 positivos=   921  precision=0.5646
+  pred1_manual_prev_g1             positivos= 19158  precision=0.5787
+  pred2_manual_prev_g1_and_snp     positivos= 15244  precision=0.5726
+  pred3_manual_dgs10_5             positivos= 15910  precision=0.5877
+  pred4_manual_dgs10_fedfunds      positivos= 15921  precision=0.5025
+  pred5_clf_10                     positivos=  9861  precision=0.5962
+  pred6_clf_4                      positivos=  6677  precision=0.6292
+  pred7_clf_second_best            positivos=  4196  precision=0.6263
+  pred8_clf_second_best_rule_56    positivos=  4183  precision=0.6268
+  pred9_clf_second_best_rule_66    positivos=  2185  precision=0.5927
+  pred10_rf_best_rule_55           positivos=  3130  precision=0.6454
+  pred11_rf_best_rule_65           positivos=    49  precision=0.6939
+
+==============================================================================
+Simulación 1
+==============================================================================
+                   prediction  sim1_count_investments  sim1_net_rev  sim1_avg_investments_per_day  sim1_capital  sim1_CAGR
+             pred0_manual_cci                     921     1655.1929                        1.8758        6000.0     1.0628
+         pred1_manual_prev_g1                   19158    40815.7669                       18.4212       72000.0     1.1188
+ pred2_manual_prev_g1_and_snp                   15244    30759.2942                       21.7151       75000.0     1.0897
+         pred3_manual_dgs10_5                   15910    37541.8030                       31.9478       99000.0     1.0837
+  pred4_manual_dgs10_fedfunds                   15921    15348.6800                       31.9058       99000.0     1.0367
+                 pred5_clf_10                    9861    27405.1523                       10.2612       48000.0     1.1195
+                  pred6_clf_4                    6677    21048.0460                       30.3500       99000.0     1.0494
+        pred7_clf_second_best                    4196    15061.8546                       10.8144       51000.0     1.0668
+pred8_clf_second_best_rule_56                    4183    15044.5520                       10.8088       51000.0     1.0668
+pred9_clf_second_best_rule_66                    2185     6397.1627                        6.2787       24000.0     1.0609
+       pred10_rf_best_rule_55                    3130    12538.7692                        5.7643       24000.0     1.1108
+       pred11_rf_best_rule_65                      49      216.8746                        1.8846        8250.0     1.0065
+
+Mejor CAGR: pred5_clf_10 = 1.1195 (10.26 trades/día en promedio)
