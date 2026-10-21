@@ -12,6 +12,8 @@ Mis soluciones de las tareas de [Stock Markets Analytics Zoomcamp 2026](https://
 | [04-trading-strategy](04-trading-strategy/) | Random Forest, reglas por umbral de probabilidad y simulación de la estrategia (CAGR) | scikit-learn |
 | [05-deployment-and-automation](05-deployment-and-automation/) | Pipeline diario: notebook → scripts, persistencia en parquet/joblib, modo rápido y cron | yfinance, FRED, TA-Lib, scikit-learn |
 
+**Proyecto final:** [latam-stock-signals](https://github.com/exequiel-santucho/latam-stock-signals): sistema de algo-trading para acciones de Latinoamérica (Brasil, México, Chile, Argentina, Colombia y Perú) con datos de 4 fuentes, XGBoost, simulación y automatización diaria.
+
 Cada carpeta tiene:
 
 - `README.md`: cómo correr la solución y la salida esperada.
