@@ -2,6 +2,8 @@
 __pycache__/
 *.py[oc]
 data/
+local_data/
+*.joblib
 *.parquet
 *.brotli
 .env

@@ -1,0 +1,278 @@
+Step 1: Getting data from APIs or Load from disk
+Attempting to fetch fresh data from APIs...
+Fetching Tickers info from YFinance
+Going download data for this tickers: ['AAPL', 'MSFT', 'NVDA', 'GOOG', 'AMZN', 'META', 'BRK-B', 'LLY', 'AVGO', 'TSLA', 'JPM', 'WMT', 'UNH', 'V', 'XOM', 'MA', 'PG', 'JNJ', 'COST', 'ORCL', 'HD', 'ABBV', 'BAC', 'KO', 'MRK', 'NFLX', 'CVX', 'ADBE', 'PEP', 'CRM', 'TMUS', 'TMO', 'AMD', 'MCD', 'CSCO', 'WFC', 'ABT', 'PM', 'DHR', 'IBM', 'TXN', 'QCOM', 'AXP', 'VZ', 'GE', 'AMGN', 'INTU', 'NOW', 'ISRG', 'NEE', 'CAT', 'DIS', 'RTX', 'MS', 'PFE', 'SPGI', 'UNP', 'GS', 'CMCSA', 'AMAT', 'UBER', 'PGR', 'T', 'LOW', 'SYK', 'LMT', 'HON', 'TJX', 'BLK', 'ELV', 'REGN', 'BKNG', 'COP', 'VRTX', 'NKE', 'BSX', 'PLD', 'SCHW', 'C', 'PANW', 'MMC', 'ADP', 'KKR', 'UPS', 'ADI', 'AMT', 'SBUX', 'DE', 'ANET', 'BMY', 'HCA', 'CI', 'KLAC', 'FI', 'LRCX', 'BX', 'GILD', 'MU', 'BA', 'SO', 'MDLZ', 'ICE', 'MO', 'SHW', 'DUK', 'MCO', 'CL', 'INTC', 'WM', 'ZTS', 'GD', 'CTAS', 'EQIX', 'DELL', 'NOC', 'CME', 'SCCO', 'TDG', 'SNYS', 'APH', 'WELL', 'MCK', 'PH', 'PYPL', 'ITW', 'MSI', 'PNC', 'ABNB', 'CMG', 'USB', 'CVS', 'MMM', 'FDX', 'EOG', 'ECL', 'BDX', 'CDNS', 'TGT', 'WDAY', 'PLTR', 'CSX', 'ORLY', 'CRWD', 'MAR', 'RSG', 'AJG', 'APO', 'CARR', 'EPD', 'SPG', 'APD', 'AFL', 'MRVL', 'PSA', 'DHI', 'NEM', 'FCX', 'ROP', 'SLB', 'TFC', 'FTNT', 'EMR', 'MPC', 'NSC', 'CEG', 'PSX', 'ADSK', 'COF', 'WMB', 'ET', 'IBKR', 'GM', 'MET', 'O', 'AEP', 'OKE', 'AZO', 'HLT', 'GEV', 'SRE', 'PCG', 'DASH', 'TRV', 'CPRT', 'OXY', 'ROST', 'KDP', 'ALL', 'BK', 'DLR']
+$FI: possibly delisted; no timezone found
+yfinance SUCCESS: Got 1205 rows for AAPL
+yfinance SUCCESS: Got 1205 rows for MSFT
+yfinance SUCCESS: Got 1205 rows for NVDA
+yfinance SUCCESS: Got 1205 rows for GOOG
+yfinance SUCCESS: Got 1205 rows for AMZN
+yfinance SUCCESS: Got 1205 rows for META
+yfinance SUCCESS: Got 1205 rows for BRK-B
+yfinance SUCCESS: Got 1205 rows for LLY
+yfinance SUCCESS: Got 1205 rows for AVGO
+yfinance SUCCESS: Got 1205 rows for TSLA
+yfinance SUCCESS: Got 1205 rows for JPM
+yfinance SUCCESS: Got 1205 rows for WMT
+yfinance SUCCESS: Got 1205 rows for UNH
+yfinance SUCCESS: Got 1205 rows for V
+yfinance SUCCESS: Got 1205 rows for XOM
+yfinance SUCCESS: Got 1205 rows for MA
+yfinance SUCCESS: Got 1205 rows for PG
+yfinance SUCCESS: Got 1205 rows for JNJ
+yfinance SUCCESS: Got 1205 rows for COST
+yfinance SUCCESS: Got 1205 rows for ORCL
+yfinance SUCCESS: Got 1205 rows for HD
+yfinance SUCCESS: Got 1205 rows for ABBV
+yfinance SUCCESS: Got 1205 rows for BAC
+yfinance SUCCESS: Got 1205 rows for KO
+yfinance SUCCESS: Got 1205 rows for MRK
+yfinance SUCCESS: Got 1205 rows for NFLX
+yfinance SUCCESS: Got 1205 rows for CVX
+yfinance SUCCESS: Got 1205 rows for ADBE
+yfinance SUCCESS: Got 1205 rows for PEP
+yfinance SUCCESS: Got 1205 rows for CRM
+yfinance SUCCESS: Got 1205 rows for TMUS
+yfinance SUCCESS: Got 1205 rows for TMO
+yfinance SUCCESS: Got 1205 rows for AMD
+yfinance SUCCESS: Got 1205 rows for MCD
+yfinance SUCCESS: Got 1205 rows for CSCO
+yfinance SUCCESS: Got 1205 rows for WFC
+yfinance SUCCESS: Got 1205 rows for ABT
+yfinance SUCCESS: Got 1205 rows for PM
+yfinance SUCCESS: Got 1205 rows for DHR
+yfinance SUCCESS: Got 1205 rows for IBM
+yfinance SUCCESS: Got 1205 rows for TXN
+yfinance SUCCESS: Got 1205 rows for QCOM
+yfinance SUCCESS: Got 1205 rows for AXP
+yfinance SUCCESS: Got 1205 rows for VZ
+yfinance SUCCESS: Got 1205 rows for GE
+yfinance SUCCESS: Got 1205 rows for AMGN
+yfinance SUCCESS: Got 1205 rows for INTU
+yfinance SUCCESS: Got 1205 rows for NOW
+yfinance SUCCESS: Got 1205 rows for ISRG
+yfinance SUCCESS: Got 1205 rows for NEE
+yfinance SUCCESS: Got 1205 rows for CAT
+yfinance SUCCESS: Got 1205 rows for DIS
+yfinance SUCCESS: Got 1205 rows for RTX
+yfinance SUCCESS: Got 1205 rows for MS
+yfinance SUCCESS: Got 1205 rows for PFE
+yfinance SUCCESS: Got 1205 rows for SPGI
+yfinance SUCCESS: Got 1205 rows for UNP
+yfinance SUCCESS: Got 1205 rows for GS
+yfinance SUCCESS: Got 1205 rows for CMCSA
+yfinance SUCCESS: Got 1205 rows for AMAT
+yfinance SUCCESS: Got 1205 rows for UBER
+yfinance SUCCESS: Got 1205 rows for PGR
+yfinance SUCCESS: Got 1205 rows for T
+yfinance SUCCESS: Got 1205 rows for LOW
+yfinance SUCCESS: Got 1205 rows for SYK
+yfinance SUCCESS: Got 1205 rows for LMT
+yfinance SUCCESS: Got 1205 rows for HON
+yfinance SUCCESS: Got 1205 rows for TJX
+yfinance SUCCESS: Got 1205 rows for BLK
+yfinance SUCCESS: Got 1205 rows for ELV
+yfinance SUCCESS: Got 1205 rows for REGN
+yfinance SUCCESS: Got 1205 rows for BKNG
+yfinance SUCCESS: Got 1205 rows for COP
+yfinance SUCCESS: Got 1205 rows for VRTX
+yfinance SUCCESS: Got 1205 rows for NKE
+yfinance SUCCESS: Got 1205 rows for BSX
+yfinance SUCCESS: Got 1205 rows for PLD
+yfinance SUCCESS: Got 1205 rows for SCHW
+yfinance SUCCESS: Got 1205 rows for C
+yfinance SUCCESS: Got 1205 rows for PANW
+yfinance returned no data for MMC
+Trying Stooq fallback for MMC...
+Stooq fallback error for MMC: module 'pandas_datareader' has no attribute 'get_data_stooq'
+No data available for MMC from any source, skipping...
+yfinance SUCCESS: Got 1205 rows for ADP
+yfinance SUCCESS: Got 1205 rows for KKR
+yfinance SUCCESS: Got 1205 rows for UPS
+yfinance SUCCESS: Got 1205 rows for ADI
+yfinance SUCCESS: Got 1205 rows for AMT
+yfinance SUCCESS: Got 1205 rows for SBUX
+yfinance SUCCESS: Got 1205 rows for DE
+yfinance SUCCESS: Got 1205 rows for ANET
+yfinance SUCCESS: Got 1205 rows for BMY
+yfinance SUCCESS: Got 1205 rows for HCA
+yfinance SUCCESS: Got 1205 rows for CI
+yfinance SUCCESS: Got 1205 rows for KLAC
+yfinance returned no data for FI
+Trying Stooq fallback for FI...
+Stooq fallback error for FI: module 'pandas_datareader' has no attribute 'get_data_stooq'
+No data available for FI from any source, skipping...
+yfinance SUCCESS: Got 1205 rows for LRCX
+yfinance SUCCESS: Got 1205 rows for BX
+yfinance SUCCESS: Got 1205 rows for GILD
+yfinance SUCCESS: Got 1205 rows for MU
+yfinance SUCCESS: Got 1205 rows for BA
+yfinance SUCCESS: Got 1205 rows for SO
+yfinance SUCCESS: Got 1205 rows for MDLZ
+yfinance SUCCESS: Got 1205 rows for ICE
+yfinance SUCCESS: Got 1205 rows for MO
+yfinance SUCCESS: Got 1205 rows for SHW
+yfinance SUCCESS: Got 1205 rows for DUK
+yfinance SUCCESS: Got 1205 rows for MCO
+yfinance SUCCESS: Got 1205 rows for CL
+yfinance SUCCESS: Got 1205 rows for INTC
+yfinance SUCCESS: Got 1205 rows for WM
+yfinance SUCCESS: Got 1205 rows for ZTS
+yfinance SUCCESS: Got 1205 rows for GD
+yfinance SUCCESS: Got 1205 rows for CTAS
+yfinance SUCCESS: Got 1205 rows for EQIX
+yfinance SUCCESS: Got 1205 rows for DELL
+yfinance SUCCESS: Got 1205 rows for NOC
+yfinance SUCCESS: Got 1205 rows for CME
+yfinance SUCCESS: Got 1205 rows for SCCO
+yfinance SUCCESS: Got 1205 rows for TDG
+yfinance returned no data for SNYS
+Trying Stooq fallback for SNYS...
+Stooq fallback error for SNYS: module 'pandas_datareader' has no attribute 'get_data_stooq'
+No data available for SNYS from any source, skipping...
+yfinance SUCCESS: Got 1205 rows for APH
+yfinance SUCCESS: Got 1205 rows for WELL
+yfinance SUCCESS: Got 1205 rows for MCK
+yfinance SUCCESS: Got 1205 rows for PH
+yfinance SUCCESS: Got 1205 rows for PYPL
+yfinance SUCCESS: Got 1205 rows for ITW
+yfinance SUCCESS: Got 1205 rows for MSI
+yfinance SUCCESS: Got 1205 rows for PNC
+yfinance SUCCESS: Got 1205 rows for ABNB
+yfinance SUCCESS: Got 1205 rows for CMG
+yfinance SUCCESS: Got 1205 rows for USB
+yfinance SUCCESS: Got 1205 rows for CVS
+yfinance SUCCESS: Got 1205 rows for MMM
+yfinance SUCCESS: Got 1205 rows for FDX
+yfinance SUCCESS: Got 1205 rows for EOG
+yfinance SUCCESS: Got 1205 rows for ECL
+yfinance SUCCESS: Got 1205 rows for BDX
+yfinance SUCCESS: Got 1205 rows for CDNS
+yfinance SUCCESS: Got 1205 rows for TGT
+yfinance SUCCESS: Got 1205 rows for WDAY
+yfinance SUCCESS: Got 1205 rows for PLTR
+yfinance SUCCESS: Got 1205 rows for CSX
+yfinance SUCCESS: Got 1205 rows for ORLY
+yfinance SUCCESS: Got 1205 rows for CRWD
+yfinance SUCCESS: Got 1205 rows for MAR
+yfinance SUCCESS: Got 1205 rows for RSG
+yfinance SUCCESS: Got 1205 rows for AJG
+yfinance SUCCESS: Got 1205 rows for APO
+yfinance SUCCESS: Got 1205 rows for CARR
+yfinance SUCCESS: Got 1205 rows for EPD
+yfinance SUCCESS: Got 1205 rows for SPG
+yfinance SUCCESS: Got 1205 rows for APD
+yfinance SUCCESS: Got 1205 rows for AFL
+yfinance SUCCESS: Got 1205 rows for MRVL
+yfinance SUCCESS: Got 1205 rows for PSA
+yfinance SUCCESS: Got 1205 rows for DHI
+yfinance SUCCESS: Got 1205 rows for NEM
+yfinance SUCCESS: Got 1205 rows for FCX
+yfinance SUCCESS: Got 1205 rows for ROP
+yfinance SUCCESS: Got 1205 rows for SLB
+yfinance SUCCESS: Got 1205 rows for TFC
+yfinance SUCCESS: Got 1205 rows for FTNT
+yfinance SUCCESS: Got 1205 rows for EMR
+yfinance SUCCESS: Got 1205 rows for MPC
+yfinance SUCCESS: Got 1205 rows for NSC
+yfinance SUCCESS: Got 1194 rows for CEG
+yfinance SUCCESS: Got 1205 rows for PSX
+yfinance SUCCESS: Got 1205 rows for ADSK
+yfinance SUCCESS: Got 1205 rows for COF
+yfinance SUCCESS: Got 1205 rows for WMB
+yfinance SUCCESS: Got 1203 rows for ET
+yfinance SUCCESS: Got 1205 rows for IBKR
+yfinance SUCCESS: Got 1205 rows for GM
+yfinance SUCCESS: Got 1205 rows for MET
+yfinance SUCCESS: Got 1205 rows for O
+yfinance SUCCESS: Got 1205 rows for AEP
+yfinance SUCCESS: Got 1205 rows for OKE
+yfinance SUCCESS: Got 1205 rows for AZO
+yfinance SUCCESS: Got 1205 rows for HLT
+yfinance SUCCESS: Got 645 rows for GEV
+yfinance SUCCESS: Got 1205 rows for SRE
+yfinance SUCCESS: Got 1205 rows for PCG
+yfinance SUCCESS: Got 1205 rows for DASH
+yfinance SUCCESS: Got 1205 rows for TRV
+yfinance SUCCESS: Got 1205 rows for CPRT
+yfinance SUCCESS: Got 1205 rows for OXY
+yfinance SUCCESS: Got 1205 rows for ROST
+yfinance SUCCESS: Got 1205 rows for KDP
+yfinance SUCCESS: Got 1205 rows for ALL
+yfinance returned no data for BK
+Trying Stooq fallback for BK...
+Stooq fallback error for BK: module 'pandas_datareader' has no attribute 'get_data_stooq'
+No data available for BK from any source, skipping...
+yfinance SUCCESS: Got 1205 rows for DLR
+Fetching Indexes info from YFinance
+yfinance SUCCESS: Got 1734 rows for DAX
+yfinance SUCCESS: Got 1710 rows for S&P500
+yfinance SUCCESS: Got 1710 rows for Dow Jones
+yfinance SUCCESS: Got 1710 rows for India ETF
+yfinance SUCCESS: Got 1712 rows for VIX
+yfinance SUCCESS: Got 1713 rows for Gold
+yfinance SUCCESS: Got 1712 rows for WTI Oil
+yfinance SUCCESS: Got 1713 rows for Brent Oil
+yfinance SUCCESS: Got 2486 rows for Bitcoin
+Fetching Macro info from FRED (Pandas_datareader)
+Saved 223557 ticker records
+Saved 1710 index records
+Saved 14818 macro records
+Successfully fetched and saved fresh data!
+Step 2: Making data transformations (combining into one dataset)
+Step 3: Training the model or loading from disk
+Prepare the dataframe: define feature sets, add dummies, temporal split
+length: X_train (156227, 389),  X_validation (33480, 389), X_test (33850, 389)
+  X_train_valid = (189707, 389),  all combined: X_all (223557, 389)
+Training the best model (RandomForest (max_depth=17, n_estimators=200))
+Step 4: Making inference
+Making inference
+Results of the 30-day prediction estimation (last 10 days):
+Top 3 predictions every day (30-day future growth):
+           Close Ticker                      Date  pred_rf_30d_best  \
+1201   55.000000   CARR 2026-10-16 00:00:00+00:00          0.726759   
+1202   27.510000   CPRT 2026-10-19 00:00:00+00:00          0.744982   
+1202   21.900000  CMCSA 2026-10-19 00:00:00+00:00          0.720250   
+1202  107.089996     BX 2026-10-19 00:00:00+00:00          0.717772   
+1203  884.809998     GS 2026-10-20 00:00:00+00:00          0.654735   
+1203   59.090000    USB 2026-10-20 00:00:00+00:00          0.624613   
+1203  238.080002   WELL 2026-10-20 00:00:00+00:00          0.619554   
+1204  237.000000   WELL 2026-10-21 00:00:00+00:00          0.634683   
+1204  809.489990   REGN 2026-10-21 00:00:00+00:00          0.634530   
+1204   28.264999    CMG 2026-10-21 00:00:00+00:00          0.629596   
+      pred_rf_30d_best_rank  
+1201                    3.0  
+1202                    1.0  
+1202                    2.0  
+1202                    3.0  
+1203                    1.0  
+1203                    2.0  
+1203                    3.0  
+1204                    1.0  
+1204                    2.0  
+1204                    3.0  
+Bottom 3 predictions every day (30-day future growth):
+           Close Ticker                      Date  pred_rf_30d_best  \
+1201  343.459991   AAPL 2026-10-16 00:00:00+00:00          0.447957   
+1202  533.520020   MSFT 2026-10-19 00:00:00+00:00          0.474122   
+1202  616.400024     MA 2026-10-19 00:00:00+00:00          0.467741   
+1202  342.940002   AAPL 2026-10-19 00:00:00+00:00          0.465977   
+1203  994.609985   COST 2026-10-20 00:00:00+00:00          0.453344   
+1203  620.419983     MA 2026-10-20 00:00:00+00:00          0.434100   
+1203  131.139999   ORCL 2026-10-20 00:00:00+00:00          0.414745   
+1204  993.000000   COST 2026-10-21 00:00:00+00:00          0.442155   
+1204  406.730011      V 2026-10-21 00:00:00+00:00          0.438826   
+1204  622.255005     MA 2026-10-21 00:00:00+00:00          0.422763   
+      pred_rf_30d_best_rank  
+1201                  186.0  
+1202                  184.0  
+1202                  185.0  
+1202                  186.0  
+1203                  184.0  
+1203                  185.0  
+1203                  186.0  
+1204                  184.0  
+1204                  185.0  
+1204                  186.0  
+Current date and time: 2026-10-21 11:01

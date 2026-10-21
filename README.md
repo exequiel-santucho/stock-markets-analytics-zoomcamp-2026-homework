@@ -10,6 +10,7 @@ Mis soluciones de las tareas de [Stock Markets Analytics Zoomcamp 2026](https://
 | [02-dataframe-analysis](02-dataframe-analysis/) | Un único DataFrame: scraping de IPOs, features por ticker, Sharpe ratio, estrategia RSI | pandas, yfinance, pyarrow |
 | [03-modeling](03-modeling/) | Dummies de calendario, reglas a mano, árboles de decisión y tuning | scikit-learn |
 | [04-trading-strategy](04-trading-strategy/) | Random Forest, reglas por umbral de probabilidad y simulación de la estrategia (CAGR) | scikit-learn |
+| [05-deployment-and-automation](05-deployment-and-automation/) | Pipeline diario: notebook → scripts, persistencia en parquet/joblib, modo rápido y cron | yfinance, FRED, TA-Lib, scikit-learn |
 
 Cada carpeta tiene:
 
@@ -20,7 +21,7 @@ Cada carpeta tiene:
 
 ## Cómo correr
 
-Python 3.13 + [uv](https://docs.astral.sh/uv/):
+Python 3.13 (3.11 en el Módulo 5) + [uv](https://docs.astral.sh/uv/):
 
 ```bash
 cd 02-dataframe-analysis

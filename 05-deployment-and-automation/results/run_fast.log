@@ -1,0 +1,59 @@
+Step 1: Getting data from APIs or Load from disk
+Loading existing data from local files...
+Step 2: Making data transformations (combining into one dataset)
+Step 3: Training the model or loading from disk
+Prepare the dataframe: define feature sets, add dummies, temporal split
+length: X_train (156227, 389),  X_validation (33480, 389), X_test (33850, 389)
+  X_train_valid = (189707, 389),  all combined: X_all (223557, 389)
+Step 4: Making inference
+Making inference
+Results of the 30-day prediction estimation (last 10 days):
+Top 3 predictions every day (30-day future growth):
+           Close Ticker                      Date  pred_rf_30d_best  \
+1201   55.000000   CARR 2026-10-16 00:00:00+00:00          0.726759   
+1202   27.510000   CPRT 2026-10-19 00:00:00+00:00          0.744982   
+1202   21.900000  CMCSA 2026-10-19 00:00:00+00:00          0.720250   
+1202  107.089996     BX 2026-10-19 00:00:00+00:00          0.717772   
+1203  884.809998     GS 2026-10-20 00:00:00+00:00          0.654735   
+1203   59.090000    USB 2026-10-20 00:00:00+00:00          0.624613   
+1203  238.080002   WELL 2026-10-20 00:00:00+00:00          0.619554   
+1204  237.000000   WELL 2026-10-21 00:00:00+00:00          0.634683   
+1204  809.489990   REGN 2026-10-21 00:00:00+00:00          0.634530   
+1204   28.264999    CMG 2026-10-21 00:00:00+00:00          0.629596   
+
+      pred_rf_30d_best_rank  
+1201                    3.0  
+1202                    1.0  
+1202                    2.0  
+1202                    3.0  
+1203                    1.0  
+1203                    2.0  
+1203                    3.0  
+1204                    1.0  
+1204                    2.0  
+1204                    3.0  
+Bottom 3 predictions every day (30-day future growth):
+           Close Ticker                      Date  pred_rf_30d_best  \
+1201  343.459991   AAPL 2026-10-16 00:00:00+00:00          0.447957   
+1202  533.520020   MSFT 2026-10-19 00:00:00+00:00          0.474122   
+1202  616.400024     MA 2026-10-19 00:00:00+00:00          0.467741   
+1202  342.940002   AAPL 2026-10-19 00:00:00+00:00          0.465977   
+1203  994.609985   COST 2026-10-20 00:00:00+00:00          0.453344   
+1203  620.419983     MA 2026-10-20 00:00:00+00:00          0.434100   
+1203  131.139999   ORCL 2026-10-20 00:00:00+00:00          0.414745   
+1204  993.000000   COST 2026-10-21 00:00:00+00:00          0.442155   
+1204  406.730011      V 2026-10-21 00:00:00+00:00          0.438826   
+1204  622.255005     MA 2026-10-21 00:00:00+00:00          0.422763   
+
+      pred_rf_30d_best_rank  
+1201                  186.0  
+1202                  184.0  
+1202                  185.0  
+1202                  186.0  
+1203                  184.0  
+1203                  185.0  
+1203                  186.0  
+1204                  184.0  
+1204                  185.0  
+1204                  186.0  
+Current date and time: 2026-10-21 11:04
